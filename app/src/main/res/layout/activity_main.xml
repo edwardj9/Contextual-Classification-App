@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.edward.learningapp.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/categories"
+        android:id="@+id/word_name"
+        android:textSize="30dp"
+        android:layout_below="@+id/menu_categories"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu"
+        android:id="@+id/menu_categories"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <GridView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridView"
+        android:layout_below="@+id/searchView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:numColumns="2" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/settingsBtn"
+        android:src="@drawable/ic_settings_black_24dp"
+        android:layout_alignTop="@+id/menu_categories"
+        android:layout_alignRight="@+id/gridView"
+        android:layout_alignEnd="@+id/gridView"
+        android:layout_alignBottom="@+id/menu_categories" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:id="@+id/gridBtn"
+        android:layout_toRightOf="@+id/word_name"
+        android:layout_toStartOf="@+id/settingsBtn"
+        android:src="@drawable/grid"
+        android:layout_toLeftOf="@+id/settingsBtn"
+        android:layout_alignTop="@+id/word_name"
+        android:layout_marginRight="10dp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/listBtn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/gridBtn"
+        android:src="@drawable/ic_list"
+        android:layout_alignTop="@+id/gridBtn" />
+
+    <SearchView
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:id="@+id/searchView"
+        android:layout_below="@+id/word_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/gridView"
+        android:layout_alignEnd="@+id/gridView"
+        android:background="@drawable/rectangle"
+        android:queryHint="Search" />
+
+</RelativeLayout>

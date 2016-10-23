@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="100dp"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/imageList"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:maxHeight="100dp"
+        android:maxWidth="115dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:layout_marginBottom="2dp"
+        android:text="TextView"
+        android:layout_marginTop="2dp" />
+
+    <!-- black background color for progress bar-->
+
+</LinearLayout>

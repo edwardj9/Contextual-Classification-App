@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Large Text"
+        android:id="@+id/textList"
+        android:layout_above="@+id/simpleProgressBar"
+        android:layout_toRightOf="@+id/imageList"
+        android:layout_marginLeft="50dp"
+        android:textSize="25dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center" />
+    <ImageView
+        android:id="@+id/imageList"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="150dp"
+        android:layout_height="105dp"
+        android:maxHeight="100dp"
+        android:maxWidth="115dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:padding="10dp" />
+    <ProgressBar
+        android:id="@+id/simpleProgressBar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:background="#ffffff"
+        android:layout_gravity="center_horizontal"
+        android:progress="10"
+        android:layout_alignBottom="@+id/imageList"
+        android:layout_toRightOf="@+id/imageList"
+        android:layout_toEndOf="@+id/imageList"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="50dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0%"
+        android:id="@+id/progressTextL"
+        android:layout_alignLeft="@+id/simpleProgressBar"
+        android:layout_alignStart="@+id/simpleProgressBar"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/imageList"
+        android:layout_marginBottom="5dp" />
+
+</RelativeLayout>
