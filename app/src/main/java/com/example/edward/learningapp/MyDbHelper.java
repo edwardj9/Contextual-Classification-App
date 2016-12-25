@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * INACTIVE
+ * SQLite database helper containing categories, Words, and image ids
  *
  * Created by edward on 8/19/16.
  */
