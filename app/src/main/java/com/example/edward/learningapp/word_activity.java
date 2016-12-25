@@ -11,9 +11,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+/*
+ * Display screen for each word, Word Activity
+ */
 public class word_activity extends AppCompatActivity implements wordSelect_fragment.onFragmentWordSelect {
 
 
+    /*
+     * Retrieve categories from main activity and init fragments
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +42,9 @@ public class word_activity extends AppCompatActivity implements wordSelect_fragm
 
     }
 
+    /*
+     * Sets appropriate images for each word
+     */
     public void onWordSelect(Word word){
         word_activity_fragment wActivity = (word_activity_fragment) getSupportFragmentManager().
                 findFragmentByTag("wActivity");
@@ -44,6 +53,9 @@ public class word_activity extends AppCompatActivity implements wordSelect_fragm
         }
     }
 
+    /*
+     * End activity(running tasks) on menu button
+     */
     public void onMenu(){
         Intent i = new Intent(this, MainActivity.class);
         i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
