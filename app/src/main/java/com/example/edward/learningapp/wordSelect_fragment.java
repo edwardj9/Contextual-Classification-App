@@ -16,7 +16,9 @@ import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
-
+/*
+ * Fragment that uses RecyclerAdapter on wordActivity screen. Manages word navigation
+ */
 public class wordSelect_fragment extends Fragment{
     private LinearLayout layout;
     RecyclerView mRecyclerView;
