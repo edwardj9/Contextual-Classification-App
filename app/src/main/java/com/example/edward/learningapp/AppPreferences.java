@@ -6,6 +6,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+/*
+Code that implements settings function fo app.
+*/
 public class AppPreferences extends AppCompatActivity {
 
     @Override
