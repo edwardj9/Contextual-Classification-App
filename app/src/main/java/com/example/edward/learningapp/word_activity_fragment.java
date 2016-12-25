@@ -16,7 +16,9 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-
+/*
+ * Uses custom adapter to set appropriate images. Called in word_activity
+ */
 public class word_activity_fragment extends Fragment {
     private GridView gv;
     TextView wordName;
@@ -45,7 +47,9 @@ public class word_activity_fragment extends Fragment {
         return view;
     }
 
-
+    /*
+     * Retrieve word from first parcelable
+     */
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -61,6 +65,9 @@ public class word_activity_fragment extends Fragment {
 
     }
 
+    /*
+     * Pass word to custom adapter
+     */
     public void setImages(Word word){
         gv.setAdapter(new CustomAdapter(getActivity(), word));
         wordName.setText(word.getWordName());
