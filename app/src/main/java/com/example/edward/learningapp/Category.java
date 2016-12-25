@@ -18,16 +18,21 @@ public class Category extends Item implements Parcelable  {
     private ArrayList<Word> words;
     private int catimg;
     private int catId;
-    //private Bitmap catimg;
-
+    
+    
     public Category(){
-
     }
 
     public Category(String CatName, int catId){
 
     }
 
+    /*
+     * Create a category object
+     * @param catName - the category name
+     * @param catimg - the drawable image id
+     * @param words - list of words belonging to category
+     */
     public Category(String catName, int catimg, ArrayList<Word> words){
         this.catName = catName;
         this.words = words;
@@ -35,40 +40,69 @@ public class Category extends Item implements Parcelable  {
     }
 
 
-
-
+    /*
+     * Returns the name of the category
+     * @return the category name
+     */
     public String getCatName(){
         return catName;
     }
-
+    
+    /*
+     * Sets the name of the category
+     */
     public void setCatName(String name){
         this.catName=name;
     }
-
+    
+    /*
+     * Returns the arraylist of words belonging to category
+     * @return the list of words
+     */
     public ArrayList<Word> getWords(){
         return words;
     }
 
+    /*
+     * Sets list of words to a category
+     */
     public void setWords(ArrayList<Word> wordSet){
         this.words = wordSet;
     }
 
+    /*
+     * Get image id of category picture
+     *
+     * @return image id of category picture
+     */
     public int getCatimg(){
         return catimg;
     }
-
+    /*
+     * Sets image id of category picture
+     */
     public void setCatimg(int catimg){
         this.catimg = catimg;
     }
-
+    /*
+     * Gets word at specific index i of category
+     * @return Word at index i
+     */
     public Word getWord(int i){
         return words.get(i);
     }
 
+    /*
+     * Adds word to category
+     */
     public void addWord(Word word){
         words.add(word);
     }
 
+    /*
+     * Gets word via word name from category
+     * @return word object
+     */
     public Word getWord(String wordName){
         for(int i=0; i<words.size(); i++){
             if(words.get(i).getWordName().equals(wordName)){
@@ -78,6 +112,10 @@ public class Category extends Item implements Parcelable  {
         return null;
     }
 
+    /*
+     * Checks if category contains a certain word
+     * @return true if category has word
+     */
     public boolean hasWord(String wordName){
         for(int i =0; i < words.size(); i++){
             if(words.get(i).getWordName().equals(wordName)){
@@ -87,6 +125,10 @@ public class Category extends Item implements Parcelable  {
         return false;
     }
 
+    /*
+     * Gets percentage completed of current category
+     * @return percentage complete
+     */
     public int getPercentage(){
         int completedAmount=0;
         for(int i = 0; i < words.size(); i++){
@@ -98,9 +140,7 @@ public class Category extends Item implements Parcelable  {
     }
 
 
-
-
-
+    //Code to make object parcelable
     private Category(Parcel in) {
         catName = in.readString();
         if (in.readByte() == 0x01) {
