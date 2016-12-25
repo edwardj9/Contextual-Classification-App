@@ -20,6 +20,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+/*
+ * Main activity of app, current categories menu
+ */
 public class MainActivity extends AppCompatActivity {
     GridView gv;
     SearchView sv;
@@ -42,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView listBtn = (ImageView) findViewById(R.id.listBtn);
         ImageView gridBtn = (ImageView) findViewById(R.id.gridBtn);
         adapter = new CustomAdapter(this, categories, false);
-        //SEARCH
+        //Code for search bar
         SearchView sv = (SearchView) findViewById(R.id.searchView);
         sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -73,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        //Set activity to wordactivity on image click
         gv.setAdapter(adapter);
         ImageView settings = (ImageView) findViewById(R.id.settingsBtn);
         settings.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +89,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
+    /*
+     * Initialize all default categories for app
+     */
     public ArrayList<Category> initCategories(){
         AssetManager assetManager = getAssets();
         ArrayList<Category> categories = new ArrayList<>();
