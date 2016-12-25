@@ -8,6 +8,8 @@ import android.os.Parcelable;
 import java.util.ArrayList;
 
 /**
+ * Class for word object
+ * 
  * Created by edward on 7/28/16.
  */
 public class Word extends Item implements Parcelable{
@@ -21,50 +23,79 @@ public class Word extends Item implements Parcelable{
     public Word(){
 
     }
-
+   /*
+    * Word constructor
+    */
    public Word(String wordName, ArrayList<Integer> imgs){
         this.wordName = wordName;
         this.imgs = imgs;
         this.completed=false;
     }
-
+    /*
+     * Sets word as completed
+     */
     public void setCompleted(){
         this.completed=true;
     }
-
-    public Boolean isCompleted(){
+    
+    /*
+     * Checks if word is compelted
+     * @return true if category is completed
+     */
+    public boolean isCompleted(){
         return this.completed;
     }
 
-
+    /*
+     * Category setter
+     */
     public void setCategory(Category category){
         this.category = category;
     }
 
+    /*
+     * Returns current category
+     */
     public Category getCategory(){
         return this.category;
     }
-
+    
+    /*
+     * Gets name of word
+     * @return name of word
+     */
     public String getWordName(){
         return wordName;
     }
 
+    /*
+     * Sets name of word
+     */
     public void setWordName(String wordName){
         this.wordName = wordName;
     }
-
+    /*
+     * Sets list of images pertaining to word
+     */
     public void setImgs(ArrayList<Integer> imgs){
         this.imgs = imgs;
     }
-
+    /*
+     * Get list of images for word
+     * 
+     * @return list of image ids
+     */
     public ArrayList<Integer> getImgs(){
         return imgs;
     }
-
+    /*
+     * Adds an image to imagelist for word
+     */
     public void addImg(Integer newImg){
         imgs.add(newImg);
     }
 
+    //CODE FOR PARCEBLABLE OBJECT BELOW
     private Word(Parcel in) {
         wordName = in.readString();
         if (in.readByte() == 0x01) {
