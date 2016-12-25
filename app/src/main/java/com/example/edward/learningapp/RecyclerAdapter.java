@@ -12,6 +12,9 @@ import java.util.ArrayList;
 
 /**
  * Created by edward on 8/18/16.
+ *
+ * Uses a RecyclerView for horizontal scrolling function on wordActivity
+ *
  */
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
     Context context;
