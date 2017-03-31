@@ -1,4 +1,4 @@
-# Contextual-Classification-App
+# Contextual Classification App
 
 ##Overview
 This app will facilitate learning basic vocabulary for children in early developmental stages. 
